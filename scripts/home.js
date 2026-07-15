@@ -23,7 +23,7 @@ const fullPage = () => {
 fullPage()
 
 logout.onclick = () => {
-    location.href = "../login.html"
+    location.href = "../index.html"
 }
 
 
