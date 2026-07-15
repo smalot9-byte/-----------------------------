@@ -1,0 +1,330 @@
+/* ===== Take me — One Order Page ===== */
+/* Same palette as the rest of the site:
+   --deep:   #4a5d63  (ink text)
+   --teal:   #6fa3b8  (logo blue/teal — primary brand color)
+   --teal-d: #5689a0  (darker teal — hover/active states)
+   --sand:   #f8fafb  (soft off-white background)
+   --line:   #e8edf0  (hairline borders/dividers)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap');
+
+:root {
+    --deep: #4a5d63;
+    --teal: #6fa3b8;
+    --teal-d: #5689a0;
+    --sand: #f8fafb;
+    --line: #e8edf0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Heebo', 'Segoe UI', Tahoma, sans-serif;
+    background: var(--sand);
+    color: var(--deep);
+    direction: rtl;
+}
+
+/* ---------- Order Details Card ---------- */
+body > .border.rounded.shadow-sm {
+    flex: 1;
+    max-width: 560px;
+    width: calc(100% - 3rem);
+    margin: 2.5rem auto 4rem;
+    background: #ffffff !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 14px 40px rgba(44, 62, 68, 0.12) !important;
+    overflow: hidden;
+    position: relative;
+}
+
+body > .border.rounded.shadow-sm::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--teal), var(--teal-d));
+}
+
+.text-center.p-5.border.rounded {
+    border: none !important;
+    padding: 2.6rem 2.2rem 2.2rem !important;
+}
+
+.text-center.p-5.border.rounded h3 {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--deep);
+    margin-bottom: 1.2rem;
+}
+
+.text-center.p-5.border.rounded p.text-muted {
+    color: var(--deep) !important;
+    font-size: 0.98rem;
+    margin-bottom: 0.7rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px dashed var(--line);
+}
+
+.text-center.p-5.border.rounded p.text-muted:empty {
+    display: none;
+}
+
+.text-center.p-5.border.rounded #name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--deep) !important;
+}
+
+.btn-primary {
+    background: var(--teal);
+    border: none;
+    border-radius: 10px;
+    padding: 0.7rem 1.8rem;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    transition: background 0.2s ease, transform 0.1s ease;
+    margin-top: 1.2rem;
+}
+
+.btn-primary:hover {
+    background: var(--teal-d);
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+/* ---------- Modal ---------- */
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 14px 40px rgba(44, 62, 68, 0.18);
+}
+
+.modal-header {
+    background: var(--sand);
+    border-bottom: 1px solid var(--line);
+    padding: 1.1rem 1.5rem;
+    position: relative;
+    justify-content: center;
+}
+
+.modal-header .modal-title {
+    font-weight: 800;
+    color: var(--deep);
+    margin: 0 auto;
+}
+
+.modal-header .btn-close {
+    background-size: 0.8em;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-header .btn-close:hover {
+    opacity: 0.9;
+}
+
+.modal-body {
+    padding: 1.8rem 1.5rem;
+    color: var(--deep);
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--line);
+    padding: 1rem 1.5rem;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+#not.btn-secondary {
+    background: transparent;
+    border: 1.5px solid #aebdc2;
+    color: var(--deep);
+    border-radius: 10px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    margin: 0;
+}
+
+#not.btn-secondary:hover {
+    background: #aebdc2;
+    color: #ffffff;
+}
+
+#yes.btn-primary {
+    background: var(--teal);
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    transition: background 0.2s ease;
+}
+
+#yes.btn-primary:hover {
+    background: var(--teal-d);
+}
+
+.modal-body p {
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.modal-body .form-control {
+    border: 1.5px solid var(--line);
+    border-radius: 10px;
+    padding: 0.65rem 1rem;
+    font-size: 0.95rem;
+    background: var(--sand);
+    text-align: right;
+    width: 100%;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.modal-body .form-control:focus {
+    border-color: var(--teal);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(74, 127, 150, 0.15);
+    outline: none;
+}
+
+.modal-body .form-control::placeholder {
+    color: #8fa3aa;
+}
+
+/* ---------- Footer ---------- */
+footer.main-footer {
+    background: #aebdc2;
+    color: #2c3e44;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2.5rem;
+    padding: 1.2rem 4rem;
+    border-top: 4px solid var(--teal);
+    margin-top: auto;
+}
+
+.list_footer a {
+    text-decoration: none;
+}
+
+.list_footer h2.bold {
+    color: #2c3e44;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.ul_info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ul_info li {
+    color: #4a5d63;
+    font-size: 0.88rem;
+    margin-bottom: 0.55rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.ul_info li:hover {
+    color: var(--teal-d);
+}
+
+.logo {
+    margin-bottom: 0;
+    margin-left: 0.6rem;
+    width: 60px;
+    height: 60px;
+}
+
+.logo #img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+footer.main-footer i {
+    color: #4a5d63;
+    font-size: 1.1rem;
+    margin-left: 0.9rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+footer.main-footer i:hover {
+    color: var(--teal-d);
+}
+
+.help {
+    align-self: flex-start;
+    background: transparent;
+    border: 1.5px solid #7e9198;
+    color: #2c3e44;
+    border-radius: 999px;
+    padding: 0.5rem 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.help:hover {
+    border-color: var(--teal-d);
+    color: var(--teal-d);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 576px) {
+    body > .border.rounded.shadow-sm {
+        margin: 1.8rem 1rem 3rem;
+        width: calc(100% - 2rem);
+    }
+
+    .text-center.p-5.border.rounded {
+        padding: 2rem 1.4rem !important;
+    }
+
+    footer.main-footer {
+        padding: 2.2rem 1.5rem;
+        gap: 2rem;
+    }
+}

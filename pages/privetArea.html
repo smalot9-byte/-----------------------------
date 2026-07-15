@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Take me</title>
+  <link rel="stylesheet" href="../lib/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="../lib/bootstrap.min.css">
+  <link rel="stylesheet" href="../style/privetArea.css">
+  <link rel="stylesheet" href="../style/footer.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a href="../login.html"><button class="logo-btn"><img id="img" src="../img/logo.png" alt=""></button></a>
+      <div id="hello"></div>
+      <div class="navbar-nav">
+        <a class="nav-link active" href="privetArea.html">פרטי חשבון</a>
+        <a class="nav-link" href="./home.html">בית</a>
+        <a class="nav-link" href="../login.html">יציאה</a>
+      </div>
+    </div>
+  </nav>
+
+  <form>
+    <h1>עריכת הפרטים האישיים</h1>
+    <div class="mb-3">
+      <label class="form-label">שם משתמש</label>
+      <input id="nameUser" name="nameUser" class="form-control" type="text" placeholder="שם משתמש" required>
+    </div>
+
+
+    <div class="password-wrap mb-3">
+      <label class="form-label">סיסמה</label>
+      <input id="password" name="password" class="form-control" type="password" placeholder="סיסמה" required>
+      <span class="toggle-password" id="togglePassword">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+        </svg>
+      </span>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">טלפון</label>
+      <input id="phone" name="phone" class="form-control" type="text" placeholder="טלפון" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">כתובת</label>
+      <input id="street" name="street" class="form-control" type="text" placeholder="רחוב" required>
+      <input id="number_home" name="number_home" class="form-control" type="number" placeholder="מספר בית" required>
+      <select id="city" name="city" class="form-control" required>
+        <option value="עיר">עיר</option>
+        <option value="ירושלים">ירושלים</option>
+        <option value="תל אביב-יפו">תל אביב-יפו</option>
+        <option value="חיפה">חיפה</option>
+        <option value="ראשון לציון">ראשון לציון</option>
+        <option value="פתח תקווה">פתח תקווה</option>
+        <option value="אשדוד">אשדוד</option>
+        <option value="נתניה">נתניה</option>
+        <option value="באר שבע">באר שבע</option>
+        <option value="בני ברק">בני ברק</option>
+        <option value="חולון">חולון</option>
+        <option value="רמת גן">רמת גן</option>
+        <option value="אשקלון">אשקלון</option>
+        <option value="רחובות">רחובות</option>
+        <option value="בת ים">בת ים</option>
+        <option value="כפר סבא">כפר סבא</option>
+        <option value="הרצליה">הרצליה</option>
+        <option value="מודיעין-מכבים-רעות">מודיעין-מכבים-רעות</option>
+        <option value="לוד">לוד</option>
+        <option value="רמלה">רמלה</option>
+        <option value="רעננה">רעננה</option>
+        <option value="הוד השרון">הוד השרון</option>
+        <option value="קריית אתא">קריית אתא</option>
+        <option value="נהריה">נהריה</option>
+        <option value="אילת">אילת</option>
+        <option value="טבריה">טבריה</option>
+        <option value="עפולה">עפולה</option>
+        <option value="קריית גת">קריית גת</option>
+        <option value="קריית מוצקין">קריית מוצקין</option>
+        <option value="קריית ים">קריית ים</option>
+        <option value="נצרת">נצרת</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">email</label>
+      <input id="email" name="email" class="form-control" type="email" placeholder="email" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">סוג משתמש</label>
+      <select id="typeUser" name="typeUser" class="form-select" required>
+        <option value="drive">נהג</option>
+        <option value="passenger">נוסע</option>
+      </select>
+    </div>
+
+
+    <button type="submit" class="btn btn-warning">שינוי </button>
+    <button type="button" id="exit" class="btn btn-warning">להסרת משתמש </button>
+    <div id="areaError"></div>
+  </form>
+  <footer class="main-footer">TAKE ME © 2026</footer>
+
+  <script src="../scripts/data.js"></script>
+  <script src="../scripts/ls.js"></script>
+  <script src="../scripts/privetArea.js"></script>
+  <script src="../scripts/js.js"></script>
+</body>
+
+</html>

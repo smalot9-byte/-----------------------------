@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Take me</title>
+  <link rel="stylesheet" href="../lib/bootstrap.min.css">
+  <link rel="stylesheet" href="../lib/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="../style/rishum.css">
+  <link rel="stylesheet" href="../style/footer.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a href="../login.html"><button class="logo-btn"><img id="img" src="../img/logo.png" alt=""></button></a>
+      <div class="navbar-nav">
+        <a class="nav-link active" href="rishum.html">רישום</a>
+        <a class="nav-link" href="../login.html">יציאה</a>
+        <a class="nav-link" href="../pages/about.html?type=no">אודות</a>
+      </div>
+    </div>
+  </nav>
+
+  <form>
+    <h1>טופס הרשמה</h1>
+    <div class="mb-3">
+      <input name="nameUser" id="nameUser" class="form-control" type="text" placeholder="שם משתמש">
+      <div class="rejax" id="rejaxnameUser"></div>
+    </div>
+
+    <div class="password-wrap mb-3">
+      <input id="password" name="password" class="form-control" type="password" placeholder="סיסמה">
+      <div class="rejax" id="rejaxpassword"></div>
+      <span class="toggle-password" id="togglePassword">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+        </svg>
+      </span>
+    </div>
+
+    <div class="mb-3">
+      <input name="phone" id="phone" class="form-control" type="text" placeholder="טלפון">
+      <div class="rejax" id="rejaxphone"></div>
+    </div>
+
+    <div class="mb-3">
+      <input name="street" id="street" class="form-control" type="text" placeholder="רחוב">
+      <div class="rejax" id="rejaxstreet"></div>
+    </div>
+
+    <div class="mb-3">
+      <input name="number_home" id="number_home" class="form-control" type="number" placeholder="מספר בית">
+      <div class="rejax" id="rejaxnumber_home"></div>
+    </div>
+
+    <div class="mb-3">
+      <select name="city" id="city" class="form-control" id="city">
+        <option value="" value disabled selected>בחר עיר</option>
+        <option value="ירושלים">ירושלים</option>
+        <option value="תל אביב-יפו">תל אביב-יפו</option>
+        <option value="חיפה">חיפה</option>
+        <option value="ראשון לציון">ראשון לציון</option>
+        <option value="פתח תקווה">פתח תקווה</option>
+        <option value="אשדוד">אשדוד</option>
+        <option value="נתניה">נתניה</option>
+        <option value="באר שבע">באר שבע</option>
+        <option value="בני ברק">בני ברק</option>
+        <option value="חולון">חולון</option>
+        <option value="רמת גן">רמת גן</option>
+        <option value="אשקלון">אשקלון</option>
+        <option value="רחובות">רחובות</option>
+        <option value="בת ים">בת ים</option>
+        <option value="כפר סבא">כפר סבא</option>
+        <option value="הרצליה">הרצליה</option>
+        <option value="מודיעין-מכבים-רעות">מודיעין-מכבים-רעות</option>
+        <option value="לוד">לוד</option>
+        <option value="רמלה">רמלה</option>
+        <option value="רעננה">רעננה</option>
+        <option value="הוד השרון">הוד השרון</option>
+        <option value="קריית אתא">קריית אתא</option>
+        <option value="נהריה">נהריה</option>
+        <option value="אילת">אילת</option>
+        <option value="טבריה">טבריה</option>
+        <option value="עפולה">עפולה</option>
+        <option value="קריית גת">קריית גת</option>
+        <option value="קריית מוצקין">קריית מוצקין</option>
+        <option value="קריית ים">קריית ים</option>
+        <option value="נצרת">נצרת</option>
+      </select>
+      <div class="rejax" id="rejaxcity"></div>
+    </div>
+
+    <div class="mb-3">
+      <input name="email" id="email" class="form-control" type="email" placeholder="email">
+      <div class="rejax" id="rejaxemail"></div>
+    </div>
+
+    <div class="mb-3">
+      <select name="typeUser" id="typeUser" class="form-select">
+        <option value="" value disabled selected>בחר תפקיד</option>
+        <option value="drive">נהג</option>
+        <option value="passenger">נוסע</option>
+      </select>
+      <div class="rejax" id="rejaxtypeUser"></div>
+    </div>
+
+    <button id="buttonRegister" type="submit" class="btn btn-success">שמירה</button>
+    <div id="areaError"></div>
+  </form>
+
+<footer class="main-footer">TAKE ME © 2026</footer>
+
+  <script src="../scripts/data.js"></script>
+  <script src="../scripts/ls.js"></script>
+  <script src="../scripts/rishum.js"></script>
+  <script src="../scripts/js.js"></script>
+</body>
+
+</html>

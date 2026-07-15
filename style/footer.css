@@ -1,0 +1,104 @@
+/* ===== Take me — Footer (shared) ===== */
+:root {
+    --deep: #4a5d63;
+    --teal: #6fa3b8;
+    --teal-d: #5689a0;
+    --sand: #f8fafb;
+    --line: #e8edf0;
+}
+
+footer.main-footer {
+    background: #aebdc2;
+    color: #2c3e44;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2.5rem;
+    padding: 1.2rem 4rem;
+    border-top: 4px solid var(--teal);
+    font-family: 'Heebo', 'Segoe UI', Tahoma, sans-serif;
+    direction: rtl;
+}
+
+.list_footer a {
+    text-decoration: none;
+}
+
+.list_footer h2.bold {
+    color: #2c3e44;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.ul_info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ul_info li {
+    color: #4a5d63;
+    font-size: 0.88rem;
+    margin-bottom: 0.55rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.ul_info li:hover {
+    color: var(--teal-d);
+}
+
+footer.main-footer .logo {
+    margin-bottom: 0.8rem;
+    width: 90px;
+    height: 90px;
+}
+
+footer.main-footer .logo #img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+footer.main-footer i {
+    color: #4a5d63;
+    font-size: 1.1rem;
+    margin-left: 0.9rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+footer.main-footer i:hover {
+    color: var(--teal-d);
+}
+
+.help {
+    align-self: flex-start;
+    background: transparent;
+    border: 1.5px solid #7e9198;
+    color: #2c3e44;
+    border-radius: 999px;
+    padding: 0.5rem 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.help:hover {
+    border-color: var(--teal-d);
+    color: var(--teal-d);
+}
+
+@media (max-width: 576px) {
+    footer.main-footer {
+        padding: 1.2rem 1.5rem;
+        gap: 2rem;
+    }
+}
+
+footer{
+    align-items: center;
+}

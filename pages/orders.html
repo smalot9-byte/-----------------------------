@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take me</title>
+    <link rel="stylesheet" href="../lib/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/orders.css">
+    <link rel="stylesheet" href="../style/footer.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a href="../login.html"><button class="logo-btn"><img id="img" src="../img/logo.png" alt=""></button></a>
+            <div id="hello"></div>
+
+            <div class="navbar-nav">
+                <a id="activeLink" class="nav-link active" href="./orders.html">הזמנות</a>
+                <a  class="nav-link" href="./home.html">בית</a>
+                <a class="nav-link" href="../login.html">יציאה</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="search" class="input-group mb-3"></div>
+
+
+    <div id="divUpdate"> <button id="updateNumPass" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#myModal">מספר המקומות שלי</button>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title ">עידכון מספר נוסעים</h3>
+                </div>
+                <div class="modal-body">ליעילות המערכת, נא הכנס מספר מקומות ברכב שלך, והמערכת תתאים לך הזמנות
+                </div>
+                <input type="number" id="numSeats">
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal" id="cancel">ביטול</button>
+                    <button class="btn btn-primary" id="ok">אישור</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ordersArea">
+
+        <div id="noFind"></div>
+    </div>
+<footer class="main-footer">TAKE ME © 2026</footer>
+
+
+    <script src="../scripts/data.js"></script>
+    <script src="../scripts/ls.js"></script>
+    <script src="../scripts/orders.js"></script>
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/js.js"></script>
+</body>
+
+</html>

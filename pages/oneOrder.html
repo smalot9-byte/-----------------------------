@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take me</title>
+    <link rel="stylesheet" href="../lib/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/oneOrder.css">
+</head>
+
+<body>
+    <h1 id="hello"></h1>
+
+    <div class="border rounded shadow-sm p-3">
+        <div class="text-center p-5 border rounded">
+            <h3></h3>
+            <p id="name" class="text-muted"></p>
+            <p id="phone" class="text-muted"></p>
+            <p id="date" class="text-muted"></p>
+            <p id="clock" class="text-muted"></p>
+            <p id="numPassenger" class="text-muted"></p>
+            <p id="stationFrom" class="text-muted"></p>
+            <p id="stationTo" class="text-muted"></p>
+            <p id="special" class="text-muted"></p>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bsExampleModal">
+                אישור</button>
+
+            <div class="modal fade" id="bsExampleModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title fs-5">אישור פעולה</h3>
+                            <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">האם להמשיך?</div>
+
+                        <div class="modal-footer">
+                            <button type="button" id="not" name="not" class="btn btn-secondary"
+                                data-bs-dismiss="modal">ביטול</button>
+                            <button type="button" id="yes" name="yes" class="btn btn-primary"
+                                data-bs-dismiss="modal">אישור</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+<footer class="main-footer">TAKE ME © 2026</footer>
+
+    <script src="../scripts/data.js"></script>
+    <script src="../scripts/ls.js"></script>
+    <script src="../scripts/oneOrder.js"></script>
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/js.js"></script>
+</body>
+
+</html>

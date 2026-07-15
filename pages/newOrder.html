@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take me</title>
+    <link rel="stylesheet" href="../lib/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/newOrder.css">
+    <link rel="stylesheet" href="../style/footer.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a href="../login.html"><button class="logo-btn"><img id="img" src="../img/logo.png" alt=""></button></a>
+            <div id="hello"></div>
+            <div class="navbar-nav">
+                <a class="nav-link active" href="newOrder.html">נסיעה חדשה</a>
+                <a  class="nav-link" href="./home.html">בית</a>
+                <a class="nav-link" href="../login.html">יציאה</a>
+            </div>
+        </div>
+    </nav>
+
+    <form>
+        <div class="mb-3">
+            <label class="form-label">מספר הזמנה</label>
+            <input class="form-control" id="numOrder" name="numOrder" type="text" placeholder="מספר הזמנה">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">שם מלא</label>
+            <input class="form-control" id="nameUser" name="nameUser" type="text" placeholder="הכניסי שם" value="">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">טלפון</label>
+            <input class="form-control" id="phone" name="phone" type="text" placeholder="טלפון" value="">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">תאריך נסיעה</label>
+            <input class="form-control" id="date" name="date" type="date" placeholder="תאריך נסיעה" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">שעת נסיעה</label>
+            <input class="form-control" id="clock" name="clock" type="time" placeholder="שעת נסיעה" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">מספר נוסעים</label>
+            <input class="form-control" id="numPassenger" name="numPassenger" type="number" placeholder="מספר נוסעים"
+                required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">תחנת מוצא</label>
+            <input class="form-control" id="stationFromStreet" name="stationFromStreet" type="text"
+                placeholder="רחוב/מקום" value="" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">תחנת מוצא</label>
+            <select class="form-control" id="stationFromCity" name="stationFromCity" required>
+                <option value="ירושלים">ירושלים</option>
+                <option value="תל אביב-יפו">תל אביב-יפו</option>
+                <option value="חיפה">חיפה</option>
+                <option value="ראשון לציון">ראשון לציון</option>
+                <option value="פתח תקווה">פתח תקווה</option>
+                <option value="אשדוד">אשדוד</option>
+                <option value="נתניה">נתניה</option>
+                <option value="באר שבע">באר שבע</option>
+                <option value="בני ברק">בני ברק</option>
+                <option value="חולון">חולון</option>
+                <option value="רמת גן">רמת גן</option>
+                <option value="אשקלון">אשקלון</option>
+                <option value="רחובות">רחובות</option>
+                <option value="בת ים">בת ים</option>
+                <option value="כפר סבא">כפר סבא</option>
+                <option value="הרצליה">הרצליה</option>
+                <option value="מודיעין-מכבים-רעות">מודיעין-מכבים-רעות</option>
+                <option value="לוד">לוד</option>
+                <option value="רמלה">רמלה</option>
+                <option value="רעננה">רעננה</option>
+                <option value="הוד השרון">הוד השרון</option>
+                <option value="קריית אתא">קריית אתא</option>
+                <option value="נהריה">נהריה</option>
+                <option value="אילת">אילת</option>
+                <option value="טבריה">טבריה</option>
+                <option value="עפולה">עפולה</option>
+                <option value="קריית גת">קריית גת</option>
+                <option value="קריית מוצקין">קריית מוצקין</option>
+                <option value="קריית ים">קריית ים</option>
+                <option value="נצרת">נצרת</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">תחנת יעד</label>
+            <input class="form-control" id="stationToStreet" name="stationToStreet" type="text" placeholder="רחוב/מקום"
+                required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">תחנת יעד</label>
+            <select class="form-control" id="stationToCity" name="stationToCity" required>
+                <option value="עיר">עיר</option>
+                <option value="ירושלים">ירושלים</option>
+                <option value="תל אביב-יפו">תל אביב-יפו</option>
+                <option value="חיפה">חיפה</option>
+                <option value="ראשון לציון">ראשון לציון</option>
+                <option value="פתח תקווה">פתח תקווה</option>
+                <option value="אשדוד">אשדוד</option>
+                <option value="נתניה">נתניה</option>
+                <option value="באר שבע">באר שבע</option>
+                <option value="בני ברק">בני ברק</option>
+                <option value="חולון">חולון</option>
+                <option value="רמת גן">רמת גן</option>
+                <option value="אשקלון">אשקלון</option>
+                <option value="רחובות">רחובות</option>
+                <option value="בת ים">בת ים</option>
+                <option value="כפר סבא">כפר סבא</option>
+                <option value="הרצליה">הרצליה</option>
+                <option value="מודיעין-מכבים-רעות">מודיעין-מכבים-רעות</option>
+                <option value="לוד">לוד</option>
+                <option value="רמלה">רמלה</option>
+                <option value="רעננה">רעננה</option>
+                <option value="הוד השרון">הוד השרון</option>
+                <option value="קריית אתא">קריית אתא</option>
+                <option value="נהריה">נהריה</option>
+                <option value="אילת">אילת</option>
+                <option value="טבריה">טבריה</option>
+                <option value="עפולה">עפולה</option>
+                <option value="קריית גת">קריית גת</option>
+                <option value="קריית מוצקין">קריית מוצקין</option>
+                <option value="קריית ים">קריית ים</option>
+                <option value="נצרת">נצרת</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">הערות</label>
+            <textarea class="form-control" id="spacial" name="spacial" type="text" placeholder="הערות"
+                maxlength="50"></textarea>
+        </div>
+
+        <button type="submit" id="save" class="btn btn-warning">הזמן עכשיו</button>
+    </form>
+<footer class="main-footer">TAKE ME © 2026</footer>
+
+
+    <script src="../scripts/data.js"></script>
+    <script src="../scripts/ls.js"></script>
+    <script src="../scripts/newOrder.js"></script>
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/js.js"></script>
+</body>
+
+</html>
