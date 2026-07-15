@@ -83,7 +83,7 @@ exitButton.onclick = () => {
     if (myUser.typeUser == "drive") {
         removeDrive(myUser)
     }
-    location.href = "../login.html"
+    location.href = "../index.html"
 }
 
 const eye = document.querySelector("#togglePassword")

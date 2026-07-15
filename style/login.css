@@ -1,4 +1,4 @@
-/* ===== Take me — Login Page ===== */
+/* ===== Take me — index Page ===== */
 /* Palette derived from the logo:
    --deep:   #2c3e44  (near-black ink, used for text)
    --teal:   #4a7f96  (logo blue/teal — primary brand color)
@@ -127,7 +127,7 @@ nav.navbar {
     color: #fff;
 }
 
-/* ---------- Login form ---------- */
+/* ---------- index form ---------- */
 form {
     flex: 1;
     display: flex;
@@ -138,7 +138,7 @@ form {
 }
 
 /* Signature element: a dashed "road" line echoing the driver/taxi
-   theme, placed just above the login card. */
+   theme, placed just above the index card. */
 form::before {
     content: "";
     display: block;
