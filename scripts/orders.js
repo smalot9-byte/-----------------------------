@@ -5,7 +5,7 @@ let isEmpty = false
 const search = new URLSearchParams(location.search)
 const type = search.get("type")
 const activeLink = document.querySelector("#activeLink")
-myOrders.sort((a,b)=> a.numOrder-b.numOrder)
+myOrders.sort((a, b) => a.numOrder - b.numOrder)
 
 const view = (order) => {
     if (!isEmpty)
@@ -199,7 +199,7 @@ const viewOrder = () => {
 }
 
 const fullAuto = () => {
-    if (type == "all") {
+    if (type == "all" || type == "allWithoutQuestion") {
         //כל הקטע של העידכון מספר מקומות הPOPUP הזה
         const numSeats = document.querySelector("#numSeats")
         const ok = document.querySelector("#ok")

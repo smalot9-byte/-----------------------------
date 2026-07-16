@@ -12,7 +12,7 @@ const rejaxType = {
     nameUser: /^[a-zA-Zא-ת ]{2,}$/,
     city: /^[א-ת -]{1,}$/,
     typeUser: /[a-z]{1,}/,
-    street: /^[[א-ת ]{1,}$/
+    street: /^[א-ת ]{1,}$/
 }
 const rejaxMassage = {
     phone: "טלפון לא תקין",

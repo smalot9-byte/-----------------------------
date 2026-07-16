@@ -1,27 +1,19 @@
 const form = document.querySelector("form")
-const password = document.querySelector("#password")
-const nameP = document.querySelector("#nameUser")
-const phone = document.querySelector("#phone")
-const street = document.querySelector("#street")
-const number_home = document.querySelector("#number_home")
-const city = document.querySelector("#city")
-const email = document.querySelector("#email")
-const typeUser = document.querySelector("#typeUser")
 const exitButton = document.querySelector("#exit")
 const myUser = getUser_now()
 const prevTypeUser = myUser.typeUser
+const edit = document.querySelector("#edit")
+
+const arrInput = [password, nameUser, phone, street, number_home, city, email, typeUser]
+arrInput.forEach(x => { x = document.querySelector(`#${x.name}`) })
 
 const fullAuto = () => {
-    password.value = myUser.password
-    nameP.value = myUser.nameUser
-    phone.value = myUser.phone
-    street.value = myUser.street
-    number_home.value = myUser.number_home
-    city.value = myUser.city
-    email.value = myUser.email
-    typeUser.value = myUser.typeUser
+    arrInput.forEach(x => {
+        x.value = myUser[x.name]
+        x.disabled = true
+    })
 }
-    
+
 fullAuto()
 
 let worng = 0
@@ -41,38 +33,44 @@ const errorThisExist = () => {
 
 form.onsubmit = (e) => {
     e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.target))
-    const isexist = isExist(data)
-
-    if (data.nameUser != myUser.nameUser && isexist) {
-        errorThisExist()
+    if (edit.innerText == "עריכה") {
+        arrInput.forEach(x => { x.disabled = false })
+        edit.innerText = "שמירה"
     }
     else {
-        if (data.nameUser != myUser.nameUser) {
-            //שינוי שם נוסע בנסיעות שלו 
-            const passengerOrders = ordersToPassengers(myUser)
-            ordersToPassengers(myUser).forEach(x => removeOredr(x));
-            passengerOrders.map(x => x.nameUser = data.nameUser)
-9            //שינוי שם נהג בנסיעות שלו 
-            const driverOrders = ordersToDrivers(myUser)
-            ordersToDrivers(myUser).forEach(x => removeOredr(x));
-            driverOrders.map(x => x.nameDriver = data.nameUser)
-            driverOrders.forEach(x => addOrder(x))
+        const data = Object.fromEntries(new FormData(e.target))
+        const isexist = isExist(data)
+
+        if (data.nameUser != myUser.nameUser && isexist) {
+            errorThisExist()
         }
-        if (prevTypeUser == "passenger") {
-            removePassenger(myUser)
+        else {
+            if (data.nameUser != myUser.nameUser) {
+                //שינוי שם נוסע בנסיעות שלו 
+                const passengerOrders = ordersToPassengers(myUser)
+                ordersToPassengers(myUser).forEach(x => removeOredr(x));
+                passengerOrders.map(x => x.nameUser = data.nameUser)
+                9            //שינוי שם נהג בנסיעות שלו 
+                const driverOrders = ordersToDrivers(myUser)
+                ordersToDrivers(myUser).forEach(x => removeOredr(x));
+                driverOrders.map(x => x.nameDriver = data.nameUser)
+                driverOrders.forEach(x => addOrder(x))
+            }
+            if (prevTypeUser == "passenger") {
+                removePassenger(myUser)
+            }
+            if (prevTypeUser == "drive") {
+                removeDrive(myUser)
+            }
+            if (data.typeUser == "passenger") {
+                addPassenger(data)
+            }
+            if (data.typeUser == "drive") {
+                addDrive(data)
+            }
+            location.href = "./privetArea.html"
+            alert("השינויים נקלטו בהצלחה")
         }
-        if (prevTypeUser == "drive") {
-            removeDrive(myUser)
-        }
-        if (data.typeUser == "passenger") {
-            addPassenger(data)
-        }
-        if (data.typeUser == "drive") {
-            addDrive(data)
-        }
-        location.href = "./home.html"
-        alert("השינויים נקלטו בהצלחה")
     }
 }
 
@@ -97,4 +95,6 @@ eye.onclick = () => {
         passwordEye.type = "password"
     }
 }
+
+
 
