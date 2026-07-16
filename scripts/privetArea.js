@@ -14,7 +14,7 @@ const fullAuto = () => {
     })
 }
 
-fullAuto();
+fullAuto()
 
 let worng = 0
 const errorThisExist = () => {
